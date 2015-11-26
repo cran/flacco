@@ -18,12 +18,13 @@ Suggests: devtools, e1071, expm, lhs, MASS, Matrix, mda, mlbench, mlr,
         smoof, testthat
 LazyData: yes
 ByteCompile: yes
-Version: 1.0
+Version: 1.1
 Date: 2015-10-28
+RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2015-10-28 17:46:27 UTC; Pascal
+Packaged: 2015-11-26 07:34:15 UTC; Pascal
 Author: Pascal Kerschke [aut, cre],
   Jan Dagefoerde [aut]
 Maintainer: Pascal Kerschke <kerschke@uni-muenster.de>
 Repository: CRAN
-Date/Publication: 2015-10-28 19:41:40
+Date/Publication: 2015-11-26 14:15:22
