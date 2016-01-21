@@ -1,7 +1,7 @@
-a0bf2378403ca83a45f76a4bcff466cd *DESCRIPTION
+df58aa0e1d92e6d1375d7031c9cc7ff0 *DESCRIPTION
 becb99ddaa77d71d97b55fa47629032a *LICENSE
 5e2b7933a567a91290fbd86b2cadf511 *NAMESPACE
-b4428a93c668654f7c8e05d077d15775 *NEWS
+9e88b17d96cd3d5bc22e30bf38612a7f *NEWS
 8c42e8d1cfa2547ae06d1e8170e48762 *R/calculateFeatureSet.R
 f409b4eb5cde7e3bc86592f8a5af467f *R/calculateFeatures.R
 81267422fc3093e8b73085cb96467897 *R/cm_computeGridCenters.R
@@ -18,7 +18,7 @@ c8b8a1615f38a06a704aebe574e1f3fc *R/feature_cm_angle.R
 746b50af3509faca16aed61627a35b72 *R/feature_ela_curvature.R
 24c7fb617503eb91d6246295ac949c51 *R/feature_ela_distribution.R
 8e805c0c7c5cff191d299b7f7d674b4b *R/feature_ela_levelset.R
-d221f15bc9ae8288ef6bb3d2409ec7cf *R/feature_ela_local_search.R
+3b232b3f668b0434ff9743f13d1468ad *R/feature_ela_local_search.R
 330f1d208cece4790d999977aef01a50 *R/feature_ela_meta_model.R
 026582d45167ebc7841a1d05630525a2 *R/feature_gcm.R
 ae6db1493c253ee9739694d17ab9451b *R/feature_gcm_barriertree.R
@@ -55,7 +55,7 @@ bb6d133097bd48ef079ed011aab11bf1 *man/plotCellMapping.Rd
 6a5e11e4e083e3936647034f8dbbfd57 *man/plotInformationContent.Rd
 f34dbdc937d3240766b700ead111ec36 *tests/test-features.R
 c132f706eed039bf6e1aea459de4d1f1 *tests/test-general.R
-ae3e3e064cbdeab577c9b46289d25e4c *tests/testthat/Rplots.pdf
+01f5e675e81571897752b2d09620c331 *tests/testthat/Rplots.pdf
 741b07bd99bc884a0b6665f3afe4bbc1 *tests/testthat/test-base-computeGridCenters.R
 07755f31ae9f3073095b737c4f209060 *tests/testthat/test-base-convertInitDesignToGrid.R
 59efa6c5d15143342cbf81bde6c55230 *tests/testthat/test-base-createFeatureObject.R
@@ -64,14 +64,14 @@ b2e18b9a59d10b82a985d80453756585 *tests/testthat/test-base-createInitialSample.R
 fd0989e4538fd72364f67e9d67272f87 *tests/testthat/test-base-listAvailableFeatures.R
 42b6b524db6b57f730071ee239096aad *tests/testthat/test-base-printFeatureObject.R
 fe8e8d3b3d0fc8b14a3741d2a0eeb0e4 *tests/testthat/test-base-utilities.R
-de49aa3896752aea14614d079b692c1b *tests/testthat/test-calculateFeatures.R
+3236a3f64c51678d70753191ce117bcd *tests/testthat/test-calculateFeatures.R
 a45012bf4145678f8b1fbe1a27d3ecbb *tests/testthat/test-cm-Angle.R
 7b25ae884fdd2dbbf7627b02fda643a5 *tests/testthat/test-cm-CellConvexity.R
 3096a97b054189c4a60c4a7dda87e4ce *tests/testthat/test-cm-GradientHomogeneity.R
 f6fe0c03435889bb5adecaa5434be086 *tests/testthat/test-ela-Convexity.R
 9a36bb57e3f8be8c2c184a2f916ea5c0 *tests/testthat/test-ela-Curvature.R
 a4fc61f92d7d010f857123e950c1bad4 *tests/testthat/test-ela-Distribution.R
-98e9c23210b2ae18d10c8fe3843419f9 *tests/testthat/test-ela-Levelset.R
+a5337d960f58545430af24dfc73bfe9a *tests/testthat/test-ela-Levelset.R
 ec51b7778083f799473fc228175dac30 *tests/testthat/test-ela-LocalSearch.R
 f935a800ab2cbfdfb8b5de50195d9f5b *tests/testthat/test-ela-MetaModel.R
 b6a650ff5b596d685c1cad442ce110c0 *tests/testthat/test-gcm-BarrierTrees.R
