@@ -13,20 +13,22 @@ URL: https://github.com/kerschke/flacco
 BugReports: https://github.com/kerschke/flacco/issues
 License: BSD_2_clause + file LICENSE
 Encoding: UTF-8
-Depends: R (>= 3.0.0), BBmisc, checkmate, mlr
+Depends: R (>= 3.0.0)
+Imports: BBmisc, checkmate, mlr
 Suggests: devtools, e1071, expm, ggplot2, lhs, MASS, Matrix, mda,
         mlbench, numDeriv, parallel, parallelMap, ParamHelpers, plotly,
-        plyr, RANN, rpart, shape, shiny, smoof, testthat
+        plyr, RANN, R.rsp, rpart, shape, shiny, smoof, testthat
 LazyData: yes
 ByteCompile: yes
-Version: 1.6
-Date: 2017-05-04
+Version: 1.7
+Date: 2017-06-14
 RoxygenNote: 6.0.1
+VignetteBuilder: R.rsp
 NeedsCompilation: no
-Packaged: 2017-05-11 15:23:07 UTC; Pascal
+Packaged: 2017-06-14 15:25:13 UTC; Pascal
 Author: Pascal Kerschke [aut, cre],
   Christian Hanster [ctb],
   Jan Dagefoerde [ctb]
 Maintainer: Pascal Kerschke <kerschke@uni-muenster.de>
 Repository: CRAN
-Date/Publication: 2017-05-11 16:29:57 UTC
+Date/Publication: 2017-06-14 21:33:46 UTC
