@@ -21,9 +21,11 @@ calculateCurvatureFeatures = function(feat.object, control) {
       sqrt(.Machine$double.eps / 7e-07))
     r = control_parameter(control, "ela_curv.r", 4)
     v = control_parameter(control, "ela_curv.v", 2)
-    if (N > feat.object$n.obs)
-      stopf("The sample size (ela_curv.sample_size = %i) is bigger than the total number of observations (%i) in this object.",
-        N, feat.object$n.obs)
+    if (N > feat.object$n.obs) {
+      warningf("As the size of the sample used for computing the curvature features (ela_curv.sample_size = %i) exceeds the total number of observations (%i) in this object, it has automatically been reduced to %i.",
+        N, feat.object$n.obs, feat.object$n.obs)
+      N = feat.object$n.obs
+    }
     calcNumDeriv = function(par) {
       h0 = abs(delta * par) + eps * (abs(par) < zero.tol)
       side = ((par - low) <= h0) - ((upp - par) <= h0)
@@ -43,12 +45,12 @@ calculateCurvatureFeatures = function(feat.object, control) {
     res = apply(X[ids, ], 1, calcNumDeriv)
     fn = apply(res, 1, function(x) {
       z = fivenum(x)
-      nas = mean(is.na(x))
-      if (nas != 1)
+      if (all(is.na(x))) {
+        m = NA_real_
+      } else {
         m = mean(x, na.rm = TRUE)
-      else
-        m = NA
-      return(c(z[1:2], m, z[3:5], sd(x, na.rm = TRUE), nas = nas))
+      }
+      return(c(z[seq_len(2L)], m, z[3L:5L], sd(x, na.rm = TRUE), nas = mean(is.na(x))))
     })
     fn = as.vector(fn, mode = "list")
     nn = c("min", "lq", "mean", "med", "uq", "max", "sd", "nas")

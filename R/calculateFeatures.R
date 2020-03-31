@@ -138,7 +138,7 @@
 #'       function evaluations and runtime (in seconds), which were needed for
 #'       the computation of these features
 #'     }
-#'     \item{\code{ela_local} -- ELA local search features (15)}:\cr
+#'     \item{\code{ela_local} -- ELA local search features (16)}:\cr
 #'     Based on some randomly chosen points from the initial design, a
 #'     pre-defined number of local searches (\code{ela_local.local_searches})
 #'     are executed. Their optima are then clustered (using hierarchical
@@ -361,7 +361,7 @@
 #'   Note that if you want to speed up the runtime of the features, you might
 #'   consider running your feature computation parallelized. For more
 #'   information, please refer to the \code{parallelMap} package or to
-#'   \url{http://mlr-org.github.io/mlr-tutorial/release/html/parallelization/index.html}.
+#'   \url{https://mlr.mlr-org.com/articles/tutorial/parallelization.html}.
 #'
 #'   Furthermore, please consider adapting the feature computation to your
 #'   needs. Possible \code{control} arguments are:
@@ -612,6 +612,12 @@
 #'
 #' @references
 #'   \itemize{
+#'     \item{Kerschke, P., and Trautmann, H. (2019)}:
+#'     \dQuote{Comprehensive Feature-Based Landscape Analysis of Continuous
+#'     and Constrained Optimization Problems Using the R-package flacco},
+#'     in: Applications in Statistical Computing -- From Music Data Analysis
+#'     to Industrial Quality Improvement, pp. 93-123, Springer.
+#'     (\url{https://link.springer.com/chapter/10.1007/978-3-030-25147-5_7}).
 #'     \item{Kerschke, P., Preuss, M., Hernandez, C., Schuetze, O., Sun, J.-Q.,
 #'     Grimme, C., Rudolph, G., Bischl, B., and Trautmann, H. (2014)}:
 #'     \dQuote{Cell Mapping Techniques for Exploratory Landscape Analysis},
@@ -690,8 +696,10 @@ calculateFeatures = function(feat.object, control, ...) {
   assertLogical(allow.costs)
   blacklist = control_parameter(control, "blacklist", NULL)
   if (any(feat.object$blocks <= 2)) {
-    blacklist = unique(c(blacklist, "cm_conv"))
-    warning("The 'cm_conv' features were not computed, because not all blocks were greater than 2.")
+    if (!("cm_conv" %in% blacklist)) {
+      blacklist = unique(c(blacklist, "cm_conv"))
+      warning("The 'cm_conv' features were not computed, because not all blocks were greater than 2.")
+    }
   }
   assertSubset(blacklist, choices = possible)
 
